@@ -51,7 +51,7 @@ To ensure the output was viable for automated replenishment, several strategic d
 ## Conclusion and Business Impact
 The implementation of the Targeted XGBoost model provides a scalable solution for Corporación Favorita. By moving toward this automated framework, the organization can achieve higher accuracy in stock-level maintenance, reduced waste in perishable categories, and optimized labor scheduling aligned with identified demand peaks.
 
-## Prepared by :**
+## Prepared by :
 **Author:** Reha Rabi  
 Masterschool Data Science Course  
 **Date:** January 2026
