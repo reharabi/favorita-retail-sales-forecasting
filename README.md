@@ -5,7 +5,7 @@
 * **Strategic Refinement:** Improved SARIMAX accuracy by 12% through manual seasonal parameter tuning.
 
 
-# Corporación Favorita: Regional Demand Forecasting and Replenishment Framework
+# Corporación Favorita: Retail Sales Forecasting
 
 
 ## Project Overview
