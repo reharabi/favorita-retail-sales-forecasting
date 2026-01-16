@@ -9,7 +9,7 @@ By focusing on the Guayas region and the Top 3 product families (Grocery I, Beve
 ## Tools and Technologies Used
 The following stack was utilized to manage data processing, modeling, and evaluation:
 
-* **Programming Language:** Python 3.x
+* **Programming Language:** Python
 * **Data Manipulation:** Pandas (Chunk-processing for large-scale datasets), NumPy
 * **Machine Learning:** XGBoost (Extreme Gradient Boosting)
 * **Time Series Analysis:** Facebook Prophet, Statsmodels (SARIMAX)
@@ -19,11 +19,11 @@ The following stack was utilized to manage data processing, modeling, and evalua
 ## Repository Structure
 The repository is organized into a modular pipeline to ensure reproducibility:
 
-1.  **01_Data_Preparation.ipynb**: Includes the "Filtered Train" logic, regional segmentation, and signal cleaning (removal of non-correlating oil price data).
-2.  **02_XGBoost_Model.ipynb**: Implementation of a High-Estimator (5k) Gradient Boosting model with early stopping to capture non-linear volatility.
-3.  **03_Prophet_Model.ipynb**: Analysis of time-series components to isolate the "Weekly Heartbeat" of retail demand.
-4.  **04_ARIMA_Model.ipynb**: A statistical approach using manually tuned Seasonal Autoregression to establish a persistent sales baseline.
-5.  **Technical_Analysis.md**: A comprehensive document detailing the methodology, feature engineering rationale, and strategic findings.
+1.  **[Data Prep](**: Includes the "Filtered Train" logic, regional segmentation, and signal cleaning (removal of non-correlating oil price data).
+2.  **[XGBoost_Model](**: Implementation of a High-Estimator (up to 5k) Gradient Boosting model with early stopping to capture non-linear volatility.
+3.  **[Prophet_Model](**: Analysis of time-series components to isolate the "Weekly Heartbeat" of retail demand.
+4.  **[ARIMA_Model](**: A statistical approach using manually tuned Seasonal Autoregression to establish a persistent sales baseline.
+5.  **[Technical_Analysis.md](**: A comprehensive document detailing the methodology, feature engineering rationale, and strategic findings.
 
 ## Model Performance Metrics
 Models were evaluated based on their ability to minimize error during high-volatility retail events (holidays and paydays).
