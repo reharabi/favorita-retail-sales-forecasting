@@ -16,7 +16,7 @@ The raw transaction data was approximately 5GB (125M rows), posing a significant
 * **Feature Selection (Oil Prices):** Following a correlation analysis of the oil.csv dataset, it was determined that oil prices did not significantly influence daily sales for the selected product categories. Consequently, oil was excluded to allow the models to focus on the more impactful internal calendar events.
 
 ## 2. Strategic Rationale for Model Selection
-Based on the exploratory analysis conducted in the [Data Prep]( notebook, we identified specific data characteristics that dictated our choice of three distinct modeling approaches:
+Based on the exploratory analysis conducted in the [Data Prep](https://github.com/reharabi/favorita-retail-sales-forecasting/blob/main/Notebooks/Data_Prep%20(2).ipynb) notebook, we identified specific data characteristics that dictated our choice of three distinct modeling approaches:
 
 1. **Addressing Non-Linear Volatility (XGBoost):** Our data preparation revealed that retail sales are defined by "spikes" during events and holidays. We chose XGBoost because gradient boosting is uniquely equipped to handle these non-linear shifts and complex interactions between multiple categorical flags that traditional linear models often ignore.
 2. **Decomposing Overlapping Seasonality (Facebook Prophet):** The EDA confirmed a very strong "Weekly Heartbeat" (weekend peaks) co-existing with long-term yearly trends. We selected Facebook Prophet because its additive model excels at breaking down these multi-layered seasonalities into interpretable components.
