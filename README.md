@@ -1,10 +1,3 @@
-## 🚀 Project Highlights
-* **Big Data Handling:** Engineered a pipeline to process 5GB of transaction data using 1M-row chunking.
-* **Model Champion:** XGBoost achieved the lowest error (**MAE: 267.65**) by identifying non-linear payday surges.
-* **Actionable Insight:** Isolated the "Weekly Heartbeat," identifying Saturday/Sunday as 60%+ of volume drivers.
-* **Strategic Refinement:** Improved SARIMAX accuracy by 12% through manual seasonal parameter tuning.
-
-
 # Corporación Favorita: Retail Sales Forecasting
 
 
