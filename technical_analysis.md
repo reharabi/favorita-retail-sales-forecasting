@@ -24,7 +24,7 @@ Based on the exploratory analysis conducted in the [Data Prep](https://github.co
 
 ## 3. Model Logic and Implementation
 
-### A. Extreme Gradient Boosting (XGBoost)
+### A. Extreme Gradient Boosting (XGBoost) [view notebook](
 
 **Operational Rationale:**
 XGBoost was selected as our primary high-performance algorithm due to its superior ability to handle non-linear volatility. Unlike traditional models, XGBoost identifies complex intersections between calendar events—such as paydays coinciding with holiday weekends—that significantly drive retail volume in the Guayas region.
@@ -32,20 +32,20 @@ XGBoost was selected as our primary high-performance algorithm due to its superi
 **Technical Architecture & Implementation:**
 * **Feature Engineering (The Signal Builder):** Raw date information was transformed into a multi-dimensional feature set, including dayofweek, quarter, month, and dayofyear. Binary markers were engineered for Month-Start/End to capture specific consumer purchasing cycles.
 * **Hyperparameter Optimization:** To ensure the model could capture high-resolution patterns without "memorizing" random noise, we utilized:
-    * **5,000 Estimators:** This provided the model with sufficient capacity to fine-tune its response to rare but impactful holiday events.
+    * **Up to 5,000 Estimators:** This provided the model with sufficient capacity to fine-tune its response to rare but impactful holiday events.
     * **Max Depth of 3:** By restricting tree depth, we forced the model to prioritize broad, recurring seasonal trends over individual day anomalies.
     * **Early Stopping Logic:** We implemented early_stopping_rounds=100. This served as a critical efficiency guardrail, automatically terminating the training process if the test error did not improve for 100 consecutive iterations. This ensured the model stopped at the point of peak generalization, preventing it from over-fitting to historical training data.
 
 **The Feature Elimination Study (Strategic Refinement):**
 We conducted a three-stage competitive test to isolate the most effective drivers of sales accuracy:
 1. **The Baseline (Calendar Only):** Established a strong initial performance using only standard date features. (MAE: 269.27 | RMSE: 484.99).
-2. **The High-Complexity Model:** We introduced Holidays & Events (which natively included the 2016 Earthquake impact) and a binary Weekend Flag. Result: Performance dropped (MAE: 271.83). Our analysis concluded that the is_weekend flag was redundant, as the model was already extracting this information from the dayofweek feature. This redundancy introduced statistical noise that degraded the model’s precision.
+2. **The High-Complexity Model:** We introduced Holidays & Events (which natively included the 2016 Earthquake impact) and a binary Weekend Flag. Result: Performance dropped (MAE: 269.63). Our analysis concluded that the is_weekend flag was redundant, as the model was already extracting this information from the dayofweek feature. This redundancy introduced statistical noise that degraded the model’s precision.
 3. **The Targeted Model (Winner):** By executing feature elimination to remove the noisy weekend markers while retaining the high-impact Holidays & Events data, we achieved our project-best performance. (MAE: 267.65 | RMSE: 483.87).
 
 **Stakeholder Value:**
 The "Targeted" XGBoost model is our champion configuration. It proves that for Favorita’s operations, a streamlined feature set—focused on core calendar drivers and verified holiday events—provides the most reliable and accurate forecast for the one-year planning horizon.
 
-### B. Facebook Prophet (Additive Decomposition)
+### B. Facebook Prophet (Additive Decomposition) [view notebook](
 
 **Operational Rationale:**
 Facebook Prophet was integrated into our framework due to its specialized capability in decomposing time series data into interpretable components: trend, weekly cycles, and yearly seasonality. For Corporación Favorita, this model serves as a vital tool for understanding the "Why" behind sales fluctuations, providing a transparent view of the underlying 7-day shopping cycle.
@@ -69,7 +69,7 @@ While the RMSE showed a negligible improvement (0.17%), the MAE increased by 0.9
 **Stakeholder Value:**
 Prophet remains our most powerful explanatory tool. By identifying that a Baseline approach is superior, we have simplified the operational pipeline for Favorita—proving that the store's 7-day shopping cycle is the most critical and stable driver for inventory planning.
 
-### C. ARIMA/SARIMAX (Statistical Autoregression)
+### C. ARIMA/SARIMAX (Statistical Autoregression) [view notebook](
 
 **Operational Rationale:**
 The ARIMA (AutoRegressive Integrated Moving Average) approach was implemented as our classical statistical benchmark. This model is essential for understanding how much of the future sales can be predicted purely through historical "autocorrelation"—the relationship between a day’s sales and the sales from previous days and weeks.
@@ -86,7 +86,7 @@ Our technical analysis revealed a common failure in automated statistical foreca
 
 **The Competitive Comparison:**
 The manual refinement proved that statistical models require specific manual adjustments to reach operational standards:
-* **Baseline Model (Automated):** MAE: 342.59.
+* **Baseline Model (Automated):** MAE: 342.59 | RMSE: 547.65
 * **Enhanced Model (Manual Refinement):** MAE: 301.25 | RMSE: 520.22.
 * **Performance Gain:** This intervention resulted in a 12% accuracy improvement and a forecast that accurately reflects the recurring weekly retail cycle rather than a flat average.
 
