@@ -1,6 +1,6 @@
 # Quick Start Guide: Retail Forecasting Pipeline
 
-This guide outlines the steps to replicate the demand forecasting framework for the Corporación Favorita (Guayas Region) project.
+This guide outlines the steps to replicate the sales forecasting framework for the Corporación Favorita (Guayas Region) project.
 
 ## 1. Environment Setup
 
