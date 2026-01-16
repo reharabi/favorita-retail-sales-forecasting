@@ -4,7 +4,7 @@ This guide outlines the steps to replicate the sales forecasting framework for t
 
 ## 1. Environment Setup
 
-This project is built using Python 3.x. It is recommended to use a virtual environment (venv or conda) to prevent library conflicts.
+This project is built using Python 3.12. It is recommended to use a virtual environment to prevent library conflicts.
 
 ### Install Dependencies
 Run the following command in your terminal or command prompt to install all necessary libraries:
