@@ -69,7 +69,7 @@ While the RMSE showed a negligible improvement (0.17%), the MAE increased by 0.9
 **Stakeholder Value:**
 Prophet remains our most powerful explanatory tool. By identifying that a Baseline approach is superior, we have simplified the operational pipeline for Favorita—proving that the store's 7-day shopping cycle is the most critical and stable driver for inventory planning.
 
-### C. ARIMA/SARIMAX (Statistical Autoregression) [view notebook](
+### C. ARIMA/SARIMAX (Statistical Autoregression) [view notebook](https://github.com/reharabi/favorita-retail-sales-forecasting/blob/main/Notebooks/Arima%20(3).ipynb)
 
 **Operational Rationale:**
 The ARIMA (AutoRegressive Integrated Moving Average) approach was implemented as our classical statistical benchmark. This model is essential for understanding how much of the future sales can be predicted purely through historical "autocorrelation"—the relationship between a day’s sales and the sales from previous days and weeks.
