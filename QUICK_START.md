@@ -42,7 +42,7 @@ To maintain the data pipeline integrity and ensure replenishment logic is applie
 ## 4. Key Configuration Parameters
 If you wish to modify the models, the following parameters are the core "levers" for accuracy:
 * **XGBoost:** `n_estimators=5000`, `max_depth=3`, `early_stopping_rounds=100`.
-* **SARIMAX:** `seasonal_order=(1, 1, 1, 7)` for the 7-day retail cycle.
+* **SARIMAX:** `seasonal_order=(1, 1, 2, 7)` for the 7-day retail cycle.
 * **Test Period:** Fixed from **August 16, 2016, to August 15, 2017**.
 
 ## 5. Visualizing Results
