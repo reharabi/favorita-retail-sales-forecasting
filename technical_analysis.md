@@ -45,7 +45,7 @@ We conducted a three-stage competitive test to isolate the most effective driver
 **Stakeholder Value:**
 The "Targeted" XGBoost model is our champion configuration. It proves that for Favorita’s operations, a streamlined feature set—focused on core calendar drivers and verified holiday events—provides the most reliable and accurate forecast for the one-year planning horizon.
 
-### B. Facebook Prophet (Additive Decomposition) [view notebook](
+### B. Facebook Prophet (Additive Decomposition) [view notebook](https://github.com/reharabi/favorita-retail-sales-forecasting/blob/main/Notebooks/MYProphet%20(4).ipynb)
 
 **Operational Rationale:**
 Facebook Prophet was integrated into our framework due to its specialized capability in decomposing time series data into interpretable components: trend, weekly cycles, and yearly seasonality. For Corporación Favorita, this model serves as a vital tool for understanding the "Why" behind sales fluctuations, providing a transparent view of the underlying 7-day shopping cycle.
