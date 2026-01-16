@@ -22,7 +22,7 @@ The repository is organized into a modular pipeline to ensure reproducibility:
 1.  **[Data Prep](https://github.com/reharabi/favorita-retail-sales-forecasting/blob/main/Notebooks/Data_Prep%20(2).ipynb)**: Includes the "Filtered Train" logic, regional segmentation, and signal cleaning (removal of non-correlating oil price data).
 2.  **[XGBoost_Model](https://github.com/reharabi/favorita-retail-sales-forecasting/blob/main/Notebooks/XGboost%20(3).ipynb)**: Implementation of a High-Estimator (up to 5k) Gradient Boosting model with early stopping to capture non-linear volatility.
 3.  **[Prophet_Model](https://github.com/reharabi/favorita-retail-sales-forecasting/blob/main/Notebooks/MYProphet%20(4).ipynb)**: Analysis of time-series components to isolate the "Weekly Heartbeat" of retail demand.
-4.  **[ARIMA_Model](**: A statistical approach using manually tuned Seasonal Autoregression to establish a persistent sales baseline.
+4.  **[ARIMA_Model](https://github.com/reharabi/favorita-retail-sales-forecasting/blob/main/Notebooks/Arima%20(3).ipynb)**: A statistical approach using manually tuned Seasonal Autoregression to establish a persistent sales baseline.
 5.  **[Technical_Analysis.md](**: A comprehensive document detailing the methodology, feature engineering rationale, and strategic findings.
 
 ## Model Performance Metrics
