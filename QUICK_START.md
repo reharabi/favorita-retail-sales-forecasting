@@ -19,6 +19,8 @@ The notebooks are designed to process the official Corporación Favorita dataset
 * `stores.csv` (Regional metadata)
 * `holidays_events.csv` (Event and holiday metadata)
 * `items.csv` (Product family metadata)
+* òil.csv`(Oil Prices)
+* `transactions.csv`
 
 ## 3. Execution Order
 To maintain the data pipeline integrity and ensure replenishment logic is applied correctly, execute the notebooks in this specific sequence:
