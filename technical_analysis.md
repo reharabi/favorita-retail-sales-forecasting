@@ -24,7 +24,7 @@ Based on the exploratory analysis conducted in the [Data Prep](https://github.co
 
 ## 3. Model Logic and Implementation
 
-### A. Extreme Gradient Boosting (XGBoost) [view notebook](
+### A. Extreme Gradient Boosting (XGBoost) [view notebook](https://github.com/reharabi/favorita-retail-sales-forecasting/blob/main/Notebooks/XGboost%20(3).ipynb)
 
 **Operational Rationale:**
 XGBoost was selected as our primary high-performance algorithm due to its superior ability to handle non-linear volatility. Unlike traditional models, XGBoost identifies complex intersections between calendar events—such as paydays coinciding with holiday weekends—that significantly drive retail volume in the Guayas region.
