@@ -1,4 +1,4 @@
-# Technical Project Analysis: Corporación Favorita Retail Sales Forecasting
+## **Technical Project Analysis: Corporación Favorita Retail Sales Forecasting**
 
 ## Introduction
 In retail operations, the ability to predict future demand is critical for inventory management and financial planning. This Corporación Favorita Retail Sales Forecasting project, conducted as part of the Masterschool Data Science Time Series Project, focused on building a reliable forecasting system for a one-year window from August 16, 2016, to August 15, 2017.
