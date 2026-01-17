@@ -1,8 +1,9 @@
 
 
+<img width="374" height="135" alt="favorita logo" src="https://github.com/user-attachments/assets/b28745d6-2e25-423a-90ce-ebfecdf5fc8b" />
 
-# Corporación Favorita: Retail Sales Forecasting        <img width="374" height="135" alt="favorita logo" src="https://github.com/user-attachments/assets/91273b37-4e4e-4fe7-a556-146cca5cd71d" />
 
+# Corporación Favorita: Retail Sales Forecasting        
 
 ## Project Overview
 This project presents a robust time-series forecasting framework developed for Corporación Favorita, Ecuador's largest grocery retailer. The primary objective was to transition from traditional inventory estimation to a data-driven system capable of supporting future demand planning and automated replenishment cycles. 
