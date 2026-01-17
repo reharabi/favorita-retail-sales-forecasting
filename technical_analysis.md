@@ -8,7 +8,7 @@ In retail operations, the ability to predict future demand is critical for inven
 
 Beyond historical analysis, the primary goal of this study was to identify a high-performance predictive framework that can be advised for future use within the company’s operations. By isolating the most effective modeling techniques and data-handling strategies, this project provides a scalable solution that will be recommended for future demand planning and automated replenishment cycles.
 
-## 1. Data Strategy & The "Filtered Train" Logic
+## 1. Data Strategy & The filter Logic
 The raw transaction data was approximately 5GB (125M rows), posing a significant computational challenge. To ensure stability and focus on high-signal data, a deliberate Filtered Train strategy was executed:
 
 * **Geographic & Category Focus:** To isolate consistent consumer behavior, we filtered the data for the 'Guayas' region (using stores.csv) and the Top 3 product families: Grocery I, Beverages, and Cleaning (using items.csv).
@@ -44,6 +44,9 @@ We conducted a three-stage competitive test to isolate the most effective driver
 1. **The Baseline (Calendar Only):** Established a strong initial performance using only standard date features. (MAE: 269.27 | RMSE: 484.99).
 2. **The High-Complexity Model:** We introduced Holidays & Events (which natively included the 2016 Earthquake impact) and a binary Weekend Flag. Result: Performance dropped (MAE: 269.63). Our analysis concluded that the is_weekend flag was redundant, as the model was already extracting this information from the dayofweek feature. This redundancy introduced statistical noise that degraded the model’s precision.
 3. **The Targeted Model (Winner):** By executing feature elimination to remove the noisy weekend markers while retaining the high-impact Holidays & Events data, we achieved our project-best performance. (MAE: 267.65 | RMSE: 483.87).
+
+   <img width="1103" height="529" alt="Screenshot 2026-01-17 at 01 18 11" src="https://github.com/user-attachments/assets/0871b4fc-9e19-401b-8560-e4833c8d08c8" />
+
 
 **Stakeholder Value:**
 The "Targeted" XGBoost model is our champion configuration. It proves that for Favorita’s operations, a streamlined feature set—focused on core calendar drivers and verified holiday events—provides the most reliable and accurate forecast for the one-year planning horizon.
