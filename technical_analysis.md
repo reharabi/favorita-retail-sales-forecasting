@@ -50,7 +50,7 @@ XGBoost was selected as our primary high-performance algorithm due to its superi
 **The Feature Elimination Study (Strategic Refinement):**
 We conducted a three-stage competitive test to isolate the most effective drivers of sales accuracy:
 1. **The Baseline (Calendar Only):** Established a strong initial performance using only standard date features. (MAE: 269.27 | RMSE: 484.99).
-2. **The High-Complexity Model:** We introduced Holidays & Events (which natively included the 2016 Earthquake impact) and a binary Weekend Flag. Result: Performance dropped (MAE: 269.63). Our analysis concluded that the is_weekend flag was redundant, as the model was already extracting this information from the dayofweek feature. This redundancy introduced statistical noise that degraded the model’s precision.
+2. **The High-Complexity Model:** We introduced Holidays & Events (which included the 2016 Earthquake impact) and a binary Weekend Flag. Result: Performance dropped (MAE: 269.63). Our analysis concluded that the is_weekend flag was redundant, as the model was already extracting this information from the dayofweek feature. This redundancy introduced statistical noise that degraded the model’s precision.
 3. **The Targeted Model (Winner):** By executing feature elimination to remove the noisy weekend markers while retaining the high-impact Holidays & Events data, we achieved our project-best performance. (MAE: 267.65 | RMSE: 483.87).
 
    <img width="1103" height="529" alt="Screenshot 2026-01-17 at 01 18 11" src="https://github.com/user-attachments/assets/0871b4fc-9e19-401b-8560-e4833c8d08c8" />
