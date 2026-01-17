@@ -1,7 +1,7 @@
 
 
 
-# Corporación Favorita: Retail Sales Forecasting
+# Corporación Favorita: Retail Sales Forecasting        <img width="374" height="135" alt="favorita logo" src="https://github.com/user-attachments/assets/91273b37-4e4e-4fe7-a556-146cca5cd71d" />
 
 
 ## Project Overview
