@@ -1,3 +1,6 @@
+
+
+
 # Corporación Favorita: Retail Sales Forecasting
 
 
@@ -33,6 +36,10 @@ Models were evaluated based on their ability to minimize error during high-volat
 | **XGBoost (Targeted)** | **267.65** | **483.87** | **Champion**: Optimal for automated replenishment. |
 | **Prophet (Baseline)** | **285.75** | **485.06** | **Explanatory**: Best for seasonal decomposition. |
 | **SARIMAX (Manual)** | **301.25** | **520.22** | **Baseline**: Reliable statistical floor. |
+
+<img width="1470" height="956" alt="Screenshot 2026-01-17 at 01 18 11" src="https://github.com/user-attachments/assets/ace9b111-7d6d-4f68-bfab-6aee9b669d57" />
+
+
 
 ## Methodology and Data Strategy
 To ensure the output was viable for automated replenishment, several strategic decisions were made:
