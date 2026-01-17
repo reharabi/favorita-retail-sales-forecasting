@@ -4,9 +4,13 @@
 # **Technical Analysis: Corporación Favorita Retail Sales Forecasting**
 
 ## Introduction
-In retail operations, the ability to predict future demand is critical for inventory management and financial planning. This Corporación Favorita Retail Sales Forecasting project, conducted as part of the Masterschool Data Science Time Series Project, focused on building a reliable forecasting system for a one-year window from August 16, 2016, to August 15, 2017.
+In retail operations, the ability to predict future demand is critical for inventory management and financial planning. This Corporación Favorita Retail Sales Forecasting project, conducted as part of the Masterschool Data Science Program, focused on building a reliable forecasting system for a one-year window from August 16, 2016, to August 15, 2017.
 
 Beyond historical analysis, the primary goal of this study was to identify a high-performance predictive framework that can be advised for future use within the company’s operations. By isolating the most effective modeling techniques and data-handling strategies, this project provides a scalable solution that will be recommended for future demand planning and automated replenishment cycles.
+
+<img width="1250" height="553" alt="download" src="https://github.com/user-attachments/assets/98e1226e-8fec-4ab9-b770-347e2f3723e4" />
+* Steady upward trend with consistent pattern.
+
 
 ## 1. Data Strategy & The filter Logic
 The raw transaction data was approximately 5GB (125M rows), posing a significant computational challenge. To ensure stability and focus on high-signal data, a deliberate Filtered Train strategy was executed:
@@ -19,6 +23,7 @@ The raw transaction data was approximately 5GB (125M rows), posing a significant
 * **Feature Selection (Oil Prices):** Following a correlation analysis of the oil.csv dataset, it was determined that oil prices did not significantly influence daily sales for the selected product categories. Consequently, oil was excluded to allow the models to focus on the more impactful internal calendar events.
 
 <img width="1093" height="465" alt="Screenshot 2026-01-17 at 00 52 00" src="https://github.com/user-attachments/assets/d6a4497f-6def-4f72-8423-01f2d651956a" />
+*Oil prices do not have a direct, immediate influence on sales.
 
 ## 2. Strategic Rationale for Model Selection
 Based on the exploratory analysis conducted in the [Data Prep](https://github.com/reharabi/favorita-retail-sales-forecasting/blob/main/Notebooks/Data_Prep%20(2).ipynb) notebook, we identified specific data characteristics that dictated our choice of three distinct modeling approaches:
@@ -70,6 +75,9 @@ We executed a competitive study between two configurations to determine the opti
 **Observation:**
 While the RMSE showed a negligible improvement (0.17%), the MAE increased by 0.93%. This suggests that adding external regressors caused the model to "over-fit" to past anomalies that did not repeat in a predictable way during the 2017 test window.
 
+<img width="1097" height="542" alt="Screenshot 2026-01-17 at 01 51 55" src="https://github.com/user-attachments/assets/dcc435b8-9429-4be5-806c-bad25d1168ec" />
+
+
 **Final Findings & Verdict:**
 * **Generalization over Complexity:** The Baseline Model is the strategic winner for operational use. It provided a lower average error (MAE), indicating that for these specific product families, the regular weekly rhythm is a more reliable predictor than the specific holiday weights assigned by the model.
 * **Interpretation of Spikes:** The component analysis revealed that when external flags were added, the model created "messy spikes" in its holiday adjustment graph. This confirms that many recorded events had a negligible impact on actual sales, and including them only added unnecessary variance to the forecast.
@@ -97,6 +105,10 @@ The manual refinement proved that statistical models require specific manual adj
 * **Baseline Model (Automated):** MAE: 342.59 | RMSE: 547.65
 * **Enhanced Model (Manual Refinement):** MAE: 301.25 | RMSE: 520.22.
 * **Performance Gain:** This intervention resulted in a 12% accuracy improvement and a forecast that accurately reflects the recurring weekly retail cycle rather than a flat average.
+
+<img width="864" height="421" alt="Screenshot 2026-01-17 at 01 58 52" src="https://github.com/user-attachments/assets/87e92b50-02e4-43eb-983f-8f622bfda6c6" />
+* Zoomed in to a specific period(Dec 2016 - Jan 2017) to compare forecasts vs actuals.
+
 
 **Stakeholder Value:**
 While SARIMAX was more conservative than XGBoost, it provided the most reliable baseline for identifying the "minimum expected volume." By correctly tuning the seasonal components, we have created a statistical safety net that ensures inventory never falls below the identified weekly threshold.
