@@ -38,7 +38,7 @@ Models were evaluated based on their ability to minimize error during high-volat
 | **SARIMAX (Manual)** | **301.25** | **520.22** | **Baseline**: Reliable statistical floor. |
 
 <img width="1103" height="529" alt="Screenshot 2026-01-17 at 01 18 11" src="https://github.com/user-attachments/assets/9fb3f81c-03e9-4b83-99fa-4c6b9a82cee4" />
-**The Targeted XGBoost Model** is our winner. By combining the core calendar features with specific holiday markers, the model achieved the lowest error rates. 
+* The Targeted XGBoost Model is our winner. By combining the core calendar features with specific holiday markers, the model achieved the lowest error rates. 
 
 ## Methodology and Data Strategy
 To ensure the output was viable for automated replenishment, several strategic decisions were made:
