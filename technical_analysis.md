@@ -1,3 +1,6 @@
+
+<img width="374" height="135" alt="favorita logo" src="https://github.com/user-attachments/assets/b56081aa-bbf2-4f50-a5e5-311067271c59" />
+
 # **Technical Analysis: Corporación Favorita Retail Sales Forecasting**
 
 ## Introduction
