@@ -18,7 +18,8 @@ The raw transaction data was approximately 5GB (125M rows), posing a significant
 * **Geographic & Category Focus:** To isolate consistent consumer behavior, we filtered the data for the 'Guayas' region (using stores.csv) and the Top 3 product families: Grocery I, Beverages, and Cleaning (using items.csv).
 * **Chunk-Based Processing:** To handle the file size, we processed the data in 1,000,000-row chunks, ensuring that the environment remained stable during the merge and filter operations.
 * **Strategic Sampling:** We extracted a 300,000-row slice for our modeling. This size was carefully chosen to be large enough to preserve complex seasonal patterns while remaining efficient for iterative model testing.
-* **Supplemental Dataset Integration:** * **Holidays & Events:** We merged holidays_events.csv to map specific sales spikes to national and local festivities.
+* **Supplemental Dataset Integration:**
+    * * **Holidays & Events:** We merged holidays_events.csv to map specific sales spikes to national and local festivities.
     * **Transactions:** Used to cross-reference sales volume with overall store foot traffic.
 * **Feature Selection (Oil Prices):** Following a correlation analysis of the oil.csv dataset, it was determined that oil prices did not significantly influence daily sales for the selected product categories. Consequently, oil was excluded to allow the models to focus on the more impactful internal calendar events.
 
