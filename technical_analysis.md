@@ -107,7 +107,7 @@ The manual refinement proved that statistical models require specific manual adj
 * **Performance Gain:** This intervention resulted in a 12% accuracy improvement and a forecast that accurately reflects the recurring weekly retail cycle rather than a flat average.
 
 <img width="864" height="421" alt="Screenshot 2026-01-17 at 01 58 52" src="https://github.com/user-attachments/assets/87e92b50-02e4-43eb-983f-8f622bfda6c6" />
-* Zoomed in to a specific period(Dec 2016 - Jan 2017) to compare forecasts vs actuals.
+*Zoomed in to a specific period(Dec 2016 - Jan 2017) to compare forecasts vs actuals.
 
 
 **Stakeholder Value:**
