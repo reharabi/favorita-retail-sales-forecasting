@@ -69,9 +69,10 @@ Facebook Prophet was integrated into our framework due to its specialized capabi
 * **Holiday & Event Integration:** We utilized the holidays_events.csv file to map specific festive impacts. This included the 2016 Earthquake, treated as a historical event to help the model distinguish between standard seasonal dips and unique external shocks.
 
 **The Experimental Comparison (Internal vs. External Drivers):**
+
 We executed a competitive study between two configurations to determine the optimal level of complexity for the 1-year forecast:
 1. **The Baseline Model (Calendar Focus):** Relying strictly on the internal daily and weekly seasonal components automatically detected by the algorithm. (MAE: 285.75 | RMSE: 485.06)
-2. **The Enhanced Model (High Detail):** We introduced external regressor flags for holidays and the earthquake recovery period. Result: MAE: 288.40 | RMSE: 484.23
+2. **The Enhanced Model (High Detail):** We introduced external regressor flag for holidays. Result: MAE: 288.40 | RMSE: 484.23
 
 **Observation:**
 While the RMSE showed a negligible improvement (0.17%), the MAE increased by 0.93%. This suggests that adding external regressors caused the model to "over-fit" to past anomalies that did not repeat in a predictable way during the 2017 test window.
