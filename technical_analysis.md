@@ -84,8 +84,6 @@ While the RMSE showed a negligible improvement (0.17%), the MAE increased by 0.9
 * **Generalization over Complexity:** The Baseline Model is the strategic winner for operational use. It provided a lower average error (MAE), indicating that for these specific product families, the regular weekly rhythm is a more reliable predictor than the specific holiday weights assigned by the model.
 * **Interpretation of Spikes:** The component analysis revealed that when external flags were added, the model created "messy spikes" in its holiday adjustment graph. This confirms that many recorded events had a negligible impact on actual sales, and including them only added unnecessary variance to the forecast.
 
-**Stakeholder Value:**
-Prophet remains our most powerful explanatory tool. By identifying that a Baseline approach is superior, we have simplified the operational pipeline for Favorita—proving that the store's 7-day shopping cycle is the most critical and stable driver for inventory planning.
 
 ### C. ARIMA/SARIMAX (Statistical Autoregression) [view notebook](https://github.com/reharabi/favorita-retail-sales-forecasting/blob/main/Notebooks/Arima%20(3).ipynb)
 
@@ -109,12 +107,10 @@ The manual refinement proved that statistical models require specific manual adj
 * **Performance Gain:** This intervention resulted in a 12% accuracy improvement and a forecast that accurately reflects the recurring weekly retail cycle rather than a flat average.
 
 <img width="864" height="421" alt="Screenshot 2026-01-17 at 01 58 52" src="https://github.com/user-attachments/assets/87e92b50-02e4-43eb-983f-8f622bfda6c6" />
+
 * Zoomed in to a specific period(Dec 2016 - Jan 2017) to compare forecasts vs actuals.
 
 
-
-**Stakeholder Value:**
-While SARIMAX was more conservative than XGBoost, it provided the most reliable baseline for identifying the "minimum expected volume." By correctly tuning the seasonal components, we have created a statistical safety net that ensures inventory never falls below the identified weekly threshold.
 
 ## 4. Quick Model Comparison
 
