@@ -12,7 +12,7 @@ Beyond historical analysis, the primary goal of this study was to identify a hig
 * Steady upward trend with consistent pattern.
 
 
-## 1. Data Strategy & The filter Logic
+## 1. Data Strategy & The Filter Logic
 The raw transaction data was approximately 5GB (125M rows), posing a significant computational challenge. To ensure stability and focus on high-signal data, a deliberate Filtered Train strategy was executed:
 
 * **Geographic & Category Focus:** To isolate consistent consumer behavior, we filtered the data for the 'Guayas' region (using stores.csv) and the Top 3 product families: Grocery I, Beverages, and Cleaning (using items.csv).
