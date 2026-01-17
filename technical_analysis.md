@@ -23,7 +23,7 @@ The raw transaction data was approximately 5GB (125M rows), posing a significant
 * **Feature Selection (Oil Prices):** Following a correlation analysis of the oil.csv dataset, it was determined that oil prices did not significantly influence daily sales for the selected product categories. Consequently, oil was excluded to allow the models to focus on the more impactful internal calendar events.
 
 <img width="1093" height="465" alt="Screenshot 2026-01-17 at 00 52 00" src="https://github.com/user-attachments/assets/d6a4497f-6def-4f72-8423-01f2d651956a" />
-*Oil prices do not have a direct, immediate influence on sales.
+* Oil prices do not have a direct, immediate influence on sales.
 
 ## 2. Strategic Rationale for Model Selection
 Based on the exploratory analysis conducted in the [Data Prep](https://github.com/reharabi/favorita-retail-sales-forecasting/blob/main/Notebooks/Data_Prep%20(2).ipynb) notebook, we identified specific data characteristics that dictated our choice of three distinct modeling approaches:
@@ -107,7 +107,8 @@ The manual refinement proved that statistical models require specific manual adj
 * **Performance Gain:** This intervention resulted in a 12% accuracy improvement and a forecast that accurately reflects the recurring weekly retail cycle rather than a flat average.
 
 <img width="864" height="421" alt="Screenshot 2026-01-17 at 01 58 52" src="https://github.com/user-attachments/assets/87e92b50-02e4-43eb-983f-8f622bfda6c6" />
-*Zoomed in to a specific period(Dec 2016 - Jan 2017) to compare forecasts vs actuals.
+* Zoomed in to a specific period(Dec 2016 - Jan 2017) to compare forecasts vs actuals.
+
 
 
 **Stakeholder Value:**
