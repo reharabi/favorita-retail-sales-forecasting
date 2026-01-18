@@ -64,7 +64,7 @@ The "Targeted" XGBoost model is our champion configuration. It proves that for F
 Facebook Prophet was integrated into our framework due to its specialized capability in decomposing time series data into interpretable components: trend, weekly cycles, and yearly seasonality. For Corporación Favorita, this model serves as a vital tool for understanding the "Why" behind sales fluctuations, providing a transparent view of the underlying 7-day shopping cycle.
 
 **Technical Architecture & Implementation:**
-* **Component Extraction:** We utilized Prophet’s additive seasonality to isolate the Weekly Heartbeat. The analysis identified a clean peak on Saturdays and Sundays, which were confirmed as the primary volume drivers for the Grocery and Beverage categories in the Guayas region.
+* **Component Extraction:** We utilized Prophet’s additive seasonality to isolate the Weekly Heartbeat. The analysis identified a clean peak on Saturdays and Sundays, which were confirmed as the primary volume drivers for the Grocery, Beverage and Cleaning categories in the Guayas region.
 * **Holiday & Event Integration:** We utilized the holidays_events.csv file to map specific festive impacts. This included the 2016 Earthquake, treated as a historical event to help the model distinguish between standard seasonal dips and unique external shocks.
 
 **The Experimental Comparison (Internal vs. External Drivers):**
